@@ -28,11 +28,15 @@ namespace Eat4Fit
         }
 
         // GET: Foods/Details/5
-        public ActionResult Details(int? id)
+        public ActionResult Details(int? id) 
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            else
+            {
+
             }
             Food food = db.Food.Find(id);
             if (food == null)
